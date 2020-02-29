@@ -1,9 +1,10 @@
 # usc-den-video-downloader
-A easy tool to download usc den video using just one right click. Using tampermonkey and node.js
+An easy tool to download usc den video using just one right click. Using tampermonkey and node.js
 
 Download USC DEN lecture videos beyond limitations.
 
-* `.ts` file format with H.264 and AAC coded.
+* output is mp4 other than `.ts` file format, you can watch the video using any player you want
+* No limitation of playing speed. Speed up and Speed down as much as you want
 * No expiration dates.
 * No DEN Player needed.
 * No anything but the lecture videos.
@@ -37,7 +38,7 @@ Download USC DEN lecture videos beyond limitations.
 * Open any lecture video.
 * Click the right button and then choose tampermonkey , and then choose the js as the image shows
 ![usage_image](./Images/web_usage.png)
-* downloading process will be automatically started. After it finished, it will show alert like this:
+* Downloading process will be automatically started. After it finished, it will show alert like this:
 ![finish_image](./Images/web_download_finished.png)
 
 ## Change Storage Location
