@@ -33,7 +33,7 @@ app.get('/download_cspiration_video', function(req, res) {
     console.log("outname is:"+ outName);
     converter
         .setInputFile(myArray[0])
-        .setOutputFile("/Users/apple/Desktop/mt/usc/402/LectureVideo/"+outName+".mp4")
+        .setOutputFile("./LectureVideo/"+outName+".mp4")
         .start()
         .then(() => {
             console.log("File converted");
