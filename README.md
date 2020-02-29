@@ -11,6 +11,8 @@ Download USC DEN lecture videos beyond limitations.
 ### Pre-requisites
 
 * macOS/Linux (tested OK on macOS 10.11/10.12 and Ubuntu 14.04)
+* Windows
+
 
 ### Usage
 
