@@ -5,6 +5,7 @@ Download USC DEN lecture videos beyond limitations.
 
 * output is mp4 other than `.ts` file format, you can watch the video using any player you want
 * No limitation of playing speed. Speed up and Speed down as much as you want
+* Output filename sorted and formated as `COURSE_YYYYMMDD.mp4`
 * No expiration dates.
 * No DEN Player needed.
 * No anything but the lecture videos.
@@ -19,12 +20,12 @@ Download USC DEN lecture videos beyond limitations.
 #### Install tamperponkey
 * Using the extension or add-on shop to install the tampermonkey
 ![tamper_image](./Images/web_extension_tamper.png)
-* Create a new script and then add the content of ___tamprmonkeyScript.js___ to it.
+* Create a new script and then add the content of ___tampermonkeyScript.js___ to it.
 #### Install nodejs
 * install nodejs and npm 
 * install expressjs using following instruction: 
     ```
-    npm install express --save
+    npm install express
     ```
 * install fluent-ffmpeg using following instruction: 
     ```
@@ -32,6 +33,7 @@ Download USC DEN lecture videos beyond limitations.
     ```
 
 ## Usage
+* First, changing the store directory location of your video in line 38 of app.js
 * Using terminal cd to the location of your ___app.js___ , run node app.js
 ![start_image](./Images/nodejs_start_process.png)
 * Log into USC DEN.
