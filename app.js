@@ -23,14 +23,26 @@ app.get('/download_usc_den_video', function (req, res) {
     // console.log("Received the filename:" + `/${q.filename}`);
     var filename = `/${q.filename}`;
     //http://denawswz.uscden.net/aws/_definst_/mp4:amazons3/gwz/CSCI402_202018620200224/CSCI402_202018620200224.mp4/playlist.m3u8
+    //http://denawswz.uscden.net/aws/_definst_/mp4:amazons3/gwz/CSCI402_20200323_120200323/CSCI402_20200323_120200323.mp4/playlist.m3u8?wowzaplaystart=0
     var myRe = /http:\/\/.*playlist\.m3u8/g;
     var myArray = myRe.exec(`/${q.downloadurl}`);
     // denawswz.uscden.net/aws/_definst_/mp4:amazons3/gwz/CSCI402_202018620200224/CSCI402_202018620200224.mp4/playlist.m3u8
     var outRe = /([A-Z]+[0-9]+_)[0-9]{7,8}(20[0-9]{6})/g;
     var out = outRe.exec(`/${q.downloadurl}`);
-    // console.log(out);
-    // var outName = ${q.filename};
-    var outName = out[1] + out[2];
+    if (out != null) {
+        // console.log(out);
+        // var outName = ${q.filename};
+        var outName = out[1] + out[2];
+    }
+    else {
+        //denawswz.uscden.net/aws/_definst_/mp4:amazons3/gwz/CSCI402_20200323_120200323/CSCI402_20200323_120200323.mp4/playlist.m3u8
+        var outRe = /([A-Z]+[0-9]+_)([0-9]{8})_([0-9]{1})([0-9]{8})/g;
+        var out = outRe.exec(`/${q.downloadurl}`);
+        console.log("out1" + out);
+        var outName = out[1] + out[2]+"_part"+out[3];
+    }
+
+
     console.log("Input filename is:" + myArray[0]);
     console.log("Output name is:" + outName);
     converter

@@ -15,6 +15,9 @@
     'use strict';
 
     var buttonGroup = document.getElementsByClassName("DENVideo");
+    if(buttonGroup[1] == "" || buttonGroup[1] == null || buttonGroup[1] == undefined){
+        alert("please try again!");
+    }
     let sourceUrl = buttonGroup[1].href;
     if(sourceUrl == "" || sourceUrl == null){
         alert("please try again!");
